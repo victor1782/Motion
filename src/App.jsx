@@ -1,13 +1,9 @@
 import './App.css'
-import Header from './components/header.jsx'
-import Grid from './components/grid.jsx'
 
 function App() {
   return (
-    <div>
-      <Header />
-      <Grid />
-    </div>
+        <h1 className='text-red-600 text-center'>Hola</h1>
+
   )
 }
 

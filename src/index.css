@@ -1,14 +1,1 @@
-
 @import "tailwindcss";
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
-
-#root {
-    padding: 0 !important; /* Elimina cualquier padding */
-    margin: 0 auto !important;  /* Opcional: Elimina márgenes */
-}
-
-body {
-    @apply bg-gray-50; /* Color Body */
-}
-
