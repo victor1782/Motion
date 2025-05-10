@@ -1,6 +1,6 @@
 
 export default function Header() {
     return (
-        <div className='bg-gray-50 pt-12'>MOTION GRAPHICS De Bick 2025 -2026</div>
+      <div className='bg-gray-50 font-work-sans text-primary pt-12 font-bold leading-20 text-[5.625rem] text-left pl-8'>MOTION <br/> GRAPHICS </div>
     )
 }

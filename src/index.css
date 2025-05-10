@@ -1,14 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 @import "tailwindcss";
-@import "tailwindcss/preflight.css" layer(base);
-@import "tailwindcss/utilities.css" layer(utilities);
+@import "tailwindcss/preflight" layer(base);
+@import "tailwindcss/utilities" layer(utilities);
 
-#root {
-    padding: 0 !important; /* Elimina cualquier padding */
-    margin: 0 auto !important;  /* Opcional: Elimina márgenes */
+@layer base {
+    :root {
+        /* Variables tipográficas */
+        --font-work-sans: 'Work Sans', sans-serif;
+
+        /* Variables de color */
+        --color-primary: 23 35 150; /* RGB separado para uso con Tailwind */
+    }
+
+    /* Estilos base */
+    #root {
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    body {
+        @apply bg-gray-50;
+        font-family: var(--font-work-sans);
+    }
 }
 
-body {
-    @apply bg-gray-50; /* Color Body */
+@layer utilities {
+    /* Clases de color personalizadas usando CSS variables */
+    .text-primary {
+        color: rgb(var(--color-primary));
+    }
+    .bg-primary {
+        background-color: rgb(var(--color-primary));
+    }
 }
-
