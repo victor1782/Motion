@@ -4,8 +4,8 @@ import Grid from './components/grid.jsx'
 
 function App() {
   return (
-    <div>
-      <Header />
+    <div className="container mx-auto px-2">
+      <Header  />
       <Grid />
     </div>
   )
