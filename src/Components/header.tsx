@@ -10,7 +10,7 @@ export default function Header() {
         <img
           src={logoUrl}
           alt="Logo"
-          className="relative h-10 w-auto lg:h-12 lg:w-auto bottom-0.2 left-29 lg:bottom-2 lg:left-80 -rotate-7 z-10"
+          className="relative h-10 w-auto lg:h-12 lg:w-auto bottom-0.2 left-29 md:bottom-0.2 md:left-35 lg:bottom-2 lg:left-80 xl:bottom-1 xl:left-60 xl1 2xl:bottom-1 2xl:left-105 -rotate-7 z-10"
         />
       </div>
     </>
