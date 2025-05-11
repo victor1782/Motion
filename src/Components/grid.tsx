@@ -1,9 +1,5 @@
 import { useEffect, useRef } from 'react';
-import {
-    animateYearElement,
-    animateClientElement,
-    animateTitleElement
-} from '@/animations/textAnimations';
+import { animateAllTextElements } from '../animations/textAnimations';
 
 const Grid = () => {
     const yearRef = useRef<HTMLParagraphElement>(null);
@@ -11,14 +7,11 @@ const Grid = () => {
     const titleRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
-        // Usamos setTimeout para asegurar que el DOM está listo
-        const timer = setTimeout(() => {
-            animateYearElement(yearRef.current);
-            animateClientElement(clientRef.current);
-            animateTitleElement(titleRef.current);
-        }, 0);
-
-        return () => clearTimeout(timer);
+        animateAllTextElements(
+          yearRef.current,
+          clientRef.current,
+          titleRef.current
+        );
     }, []);
 
     return (
