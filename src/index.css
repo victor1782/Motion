@@ -33,10 +33,11 @@
     .bg-primary {
         background-color: rgb(var(--color-primary));
     }
+
     @media (min-width: 1280px) and (max-width: 1535px) {
         .xl1 {
             bottom: 0.30rem; /* bottom-1 */
-            left: 19rem; /* left-60 */
+            left: 16.5rem; /* left-60 */
         }
     }
 }

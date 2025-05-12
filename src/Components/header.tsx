@@ -1,51 +1,66 @@
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 import logoUrl from '../assets/pill_2.svg';
-import { animateHeaderElements } from '../animations/textAnimations';
+import { useTextAnimation } from '../animations/textAnimations';
 
 export default function Header() {
-  const motionRef = useRef<HTMLDivElement>(null);
-  const graphicsRef = useRef<HTMLDivElement>(null);
-  const logoRef = useRef<HTMLImageElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const imgRef = useRef<HTMLImageElement>(null);
+  const { ref: motionRef, timeline: motionTimeline } = useTextAnimation();
+  const { ref: graphicsRef, timeline: graphicsTimeline } = useTextAnimation(0.6);
 
-  // Opción 1: Usando useGSAP (recomendado)
   useGSAP(() => {
-    animateHeaderElements(
-      motionRef.current,
-      graphicsRef.current,
-      logoRef.current
-    );
-  },  []);
+    // Crear timeline maestra
+    const masterTL = gsap.timeline();
 
-  // Opción 2: Manteniendo useEffect como alternativa
-  /*
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      animateHeaderElements(
-        motionRef.current,
-        graphicsRef.current,
-        logoRef.current
+    // Calcular duración total aproximada de las animaciones de texto
+    const textAnimationDuration = 0.6 + 6 * 0.08; // delay inicial + 6 letras * stagger
+
+    // Agregar timelines de texto si existen
+    if (motionTimeline) masterTL.add(motionTimeline);
+    if (graphicsTimeline) masterTL.add(graphicsTimeline);
+
+    // Animación de imagen con delay después del texto
+    if (imgRef.current) {
+      // Configurar estado inicial
+      gsap.set(imgRef.current, {
+        opacity: 0,
+        scale: 1.5,
+        rotation: -7
+      });
+
+      // Animación después de que termine el texto
+      masterTL.to(
+        imgRef.current,
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1.2,
+          ease: 'elastic.out(1, 0.6)'
+        },
+        `+=${textAnimationDuration * 1.8}` // Delay adicional tiempo de texto
       );
-    });
-
-    return () => ctx.revert(); // Limpieza de animaciones
-  }, []);
-  */
+    }
+  }, { scope: headerRef });
 
   return (
-    <>
-      <div className='mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 bg-gray-50 static font-work-sans text-primary pt-12 font-extrabold leading-[0.9] text-[3rem] lg:text-[5.625rem] text-left'>
-        <div ref={motionRef}>MOTION</div>
-        <div ref={graphicsRef}>GRAPHICS</div>
+    <header ref={headerRef} className="bg-gray-50 relative">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 bg-gray-50 static font-work-sans text-primary pt-12 font-extrabold leading-[0.9] text-[3rem] lg:text-[5.625rem] text-left">
+        <h1 className="font-work-sans text-primary font-extrabold leading-[0.9] text-[3rem] lg:text-[5.625rem] text-left">
+          <div ref={motionRef}>MOTION</div>
+          <div ref={graphicsRef}>GRAPHICS</div>
+        </h1>
+
+        <div className="relative z-10">
+          <img
+            ref={imgRef}
+            src={logoUrl}
+            alt="Pill Logo"
+            className="relative h-8 w-auto lg:h-12 lg:w-auto bottom-0.2 left-28 md:bottom-0.2 md:left-28 lg:bottom-1 lg:left-65 xl:bottom-1 xl:left-60 xl1 2xl:bottom-1 2xl:left-65 -rotate-7 z-10"
+          />
+        </div>
       </div>
-      <div className="relative">
-        <img
-          ref={logoRef}
-          src={logoUrl}
-          alt="Logo"
-          className="relative h-10 w-auto lg:h-12 lg:w-auto bottom-0.2 left-29 md:bottom-0.2 md:left-35 lg:bottom-2 lg:left-80 xl:bottom-1 xl:left-60 xl1 2xl:bottom-1 2xl:left-105 -rotate-7 z-10"
-        />
-      </div>
-    </>
+    </header>
   );
 }
