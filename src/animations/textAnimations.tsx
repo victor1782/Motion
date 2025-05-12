@@ -13,7 +13,7 @@ interface TextAnimationReturn {
 
 export function useTextAnimation(delay: number = 0): TextAnimationReturn {
   const textRef = useRef<HTMLDivElement>(null);
-  const animationComplete = useRef<gsap.core.Timeline>();
+  const animationComplete = useRef<gsap.core.Timeline | null>(null);
 
   useGSAP(() => {
     if (!textRef.current) return;

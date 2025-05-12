@@ -1,7 +1,7 @@
 import { useRef } from 'react';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
-import logoUrl from '../assets/pill_2.svg';
+import logoUrl from '../assets/img/pill_2.svg';
 import { useTextAnimation } from '../animations/textAnimations';
 
 export default function Header() {
