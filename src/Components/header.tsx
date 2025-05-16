@@ -46,7 +46,7 @@ export default function Header() {
 
   return (
     <header ref={headerRef} className="bg-gray-50 relative">
-      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 bg-gray-50 static font-work-sans text-primary pt-12 font-extrabold leading-[0.9] text-[3rem] lg:text-[5.625rem] text-left">
+      <div className="mx-auto max-w-2xl px-6 lg:max-w-7xl lg:px-8 color-primary static font-work-sans text-primary pt-12 font-extrabold leading-[0.9] text-[3rem] lg:text-[5.625rem] text-left">
         <h1 className="font-work-sans text-primary font-extrabold leading-[0.9] text-[3rem] lg:text-[5.625rem] text-left">
           <div ref={motionRef}>MOTION</div>
           <div ref={graphicsRef}>GRAPHICS</div>

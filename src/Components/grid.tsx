@@ -12,20 +12,20 @@ const Grid = () => {
               {/*Grid 2025*/}
               <div className='titles'>
                   <p className="text-left text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Year: </span>
+                      <span className='color-primary'>Year: </span>
                       2025
                   </p>
                   <p className="text-left leading-3 text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Client: </span>
+                      <span className='color-primary'>Client: </span>
                       LATAM
                   </p>
                   <p
-                    className="text-left text-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
+                    className="text-left color-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
                       Campaña · Elige viajar mejor / Chile
                   </p>
               </div>
               <div
-                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t-2 border-gray-200 lg:grid-rows-[auto_1fr]">
+                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t border-gray-200 lg:grid-rows-[auto_1fr]">
 
                   {/*Primer elemento - ocupará 2 columnas en desktop*/}
                   <div className="relative lg:col-span-2 lg:row-span-2 max-lg:order-1 h-full">
@@ -194,20 +194,20 @@ const Grid = () => {
               {/*Grid 2025*/}
               <div className='titles pt-50'>
                   <p className="text-left text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Year: </span>
+                      <span className='color-primary'>Year: </span>
                       2025
                   </p>
                   <p className="text-left leading-3 text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Client: </span>
+                      <span className='color-primary'>Client: </span>
                       LATAM
                   </p>
                   <p
-                    className="text-left text-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
+                    className="text-left color-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
                       Campaña · Elige Viajar Mejor
                   </p>
               </div>
               <div
-                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t-2 border-gray-200 lg:grid-rows-[auto_1fr]">
+                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t border-gray-200 lg:grid-rows-[auto_1fr]">
 
                   {/*Primer elemento - ocupará 2 columnas en desktop*/}
                   <div className="relative lg:col-span-2 lg:row-span-2 max-lg:order-1 h-full">
@@ -250,20 +250,20 @@ const Grid = () => {
               {/*Grid 2023*/}
               <div className='titles pt-50'>
                   <p className="text-left text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Year: </span>
+                      <span className='color-primary'>Year: </span>
                       2023
                   </p>
                   <p className="text-left leading-3 text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Client: </span>
+                      <span className='color-primary'>Client: </span>
                       LATAM · Disney
                   </p>
                   <p
-                    className="text-left text-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
+                    className="text-left color-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
                       Vacaciones · Disney Colombia / Chile
                   </p>
               </div>
               <div
-                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t-2 border-gray-200 lg:grid-rows-[auto_1fr]">
+                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t border-gray-200 lg:grid-rows-[auto_1fr]">
 
 
                   {/*Primer elemento*/}
@@ -434,20 +434,20 @@ const Grid = () => {
               {/*Grid 2023*/}
               <div className='titles pt-50'>
                   <p className="text-left text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Year: </span>
+                      <span className='color-primary'>Year: </span>
                       2023
                   </p>
                   <p className="text-left leading-3 text-base/7 font-semibold dark:text-stone-400/80">
-                      <span className='text-primary'>Client: </span>
+                      <span className='color-primary'>Client: </span>
                       LATAM
                   </p>
                   <p
-                    className="text-left text-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
+                    className="text-left color-primary font-bold mt-2 max-w-lg text-2xl lg:text-2xl font-semibold tracking-tight text-balance">
                       Juegos Olímpicos Santiago 2023
                   </p>
               </div>
               <div
-                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t-2 border-gray-200 lg:grid-rows-[auto_1fr]">
+                className=" maingrid mt-8 pt-8 lg:pt-12 grid grid-cols-1 lg:grid-cols-3 gap-4 border-t border-gray-200 lg:grid-rows-[auto_1fr]">
 
 
                   {/*Primer elemento*/}

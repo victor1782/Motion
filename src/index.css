@@ -27,7 +27,7 @@
 
 @layer utilities {
     /* Clases de color personalizadas usando CSS variables */
-    .text-primary {
+    .color-primary {
         color: rgb(var(--color-primary));
     }
     .bg-primary {
